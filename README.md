@@ -20,9 +20,9 @@
  
  Effects: Retrigger all played cards, 1 in 10 chance to destroy itself when round ends.
  
- Rarity: Common
+ Rarity: Uncommon
  
- Cost: 8
+ Cost: 6
 
 
  ### Eclipse Joker
@@ -34,6 +34,6 @@
  
  Rarity: Rare
  
- Cost: 4
+ Cost: 8
 
  
