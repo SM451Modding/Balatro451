@@ -101,11 +101,11 @@ SMODS.Joker{
   yes_pool_flag = 'rorschach_extinct',
   eternal_compat = false,
   config = {extra = {repetitions = 1, odds = 10}},
-  rarity = 1,
+  rarity = 2,
   discovered = true,
   atlas = 'jokers',
   pos = {x = 2, y = 0},
-  cost = 4,
+  cost = 6,
   loc_vars = function(self, info_queue, card)
     return {vars = {(G.GAME.probabilities.normal or 1), card.ability.extra.odds}}
   end,
