@@ -43,6 +43,57 @@ SMODS.Joker{
   end
 }
 
+SMODS.Joker{
+  key = 'timecard',
+  loc_txt = {
+    name = 'Time Card', text = {"Each played {C:attention}9{} or {C:attention}5", "gives {C:chips}+#1#{} Chips and", "{C:mult}+#2#{} Mult when scored", "{C:inactive}'What a way to make a livin'{C:inactive}"}},
+  config = {extra = {chips = 10, mult = 4}},
+  rarity = 1, cost = 4, discovered = true,
+  atlas = 'jokers451', pos = {x = 3, y = 0},
+  loc_vars = function(self, info_queue, card)
+    return {vars = {card.ability.extra.chips, card.ability.extra.mult}}
+  end,
+  calculate = function(self, card, context)
+    if context.individual and context.cardarea == G.play then
+      if context.other_card:get_id() == 9 or context.other_card:get_id() == 5 then
+        return {
+          chips = card.ability.extra.chips,
+          mult = card.ability.extra.mult,
+          card = card
+        }
+      end
+    end
+  end
+}
+
+SMODS.Joker{
+  key = 'jpod',
+  loc_txt = {
+    name = 'JPod Shuffle', text = {"This Joker gains {C:chips}+#2#{} Chips", "when any {C:attention}Booster Pack{} is skipped", "{C:inactive}(Currently{C:inactive} {C:chips}+#1#{} {C:inactive}Chips){C:inactive}", "{C:inactive}'Life is random'{C:inactive}"}},
+  config = {extra = {chips = 0, chip_gain = 25}},
+  rarity = 1, cost = 5, discovered = true,
+  atlas = 'jokers451', pos = {x = 4, y = 0},
+  loc_vars = function(self, info_queue, card)
+   return {vars = {card.ability.extra.chips, card.ability.extra.chip_gain}}
+  end,
+  calculate = function(self, card, context)
+   if context.joker_main then
+    return {
+     chip_mod = card.ability.extra.chips,
+     message = localize{type = 'variable', key = 'a_chips', vars = {card.ability.extra.chips}}
+    }
+   end
+   if context.skipping_booster then
+    card.ability.extra.chips = card.ability.extra.chips + card.ability.extra.chip_gain
+    return {
+     card = card,
+     message = 'Upgraded!',
+     colour = G.C.CHIPS
+    }
+   end
+  end
+}
+
 -- UNCOMMON JOKERS
 
 SMODS.Joker{
