@@ -13,6 +13,27 @@
  
  Cost: 4
 
+ ### Time Card
+ ![image](https://github.com/user-attachments/assets/ffbdab5e-032c-4864-a2b6-2614e3e80641)
+ Description: "All part of a bigger picture." (Featuring the 19th century painting A Sunday on La Grande Jatte)
+ 
+ Effects: Each played 9 or 5 gives 10 chips and 4 mult when scored.
+ 
+ Rarity: Common
+ 
+ Cost: 4
+
+ ### JPod Shuffle
+ ![image](https://github.com/user-attachments/assets/6bf38d45-d645-48c1-a7b5-e69f90f97917)
+ Description: "All part of a bigger picture." (Featuring the 19th century painting A Sunday on La Grande Jatte)
+ 
+ Effects: This joker gains +25 chips whenever a Booster Pack of any kind is skipped.
+ 
+ Rarity: Common
+ 
+ Cost: 5
+
+
  ### Rorschach Joker
  ![image](https://github.com/user-attachments/assets/7ded319d-3278-4bd2-a051-89c9bd310ef2)
  
